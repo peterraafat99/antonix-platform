@@ -1,0 +1,43 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "review-ai-platform",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "env": {
+    "staging": {
+      "name": "review-ai-platform-staging",
+      "routes": [
+        {
+          "pattern": "staging.antonix.nl/*",
+          "zone_name": "antonix.nl"
+        }
+      ],
+      "vars": {
+        "APP_URL": "https://staging.antonix.nl",
+        "GOOGLE_API_MOCK": "true",
+        "AI_ENABLED": "true",
+        "PUBLISHING_ENABLED": "true"
+      }
+    },
+    "production": {
+      "name": "review-ai-platform-production",
+      "routes": [
+        {
+          "pattern": "antonix.nl/*",
+          "zone_name": "antonix.nl"
+        }
+      ],
+      "vars": {
+        "APP_URL": "https://antonix.nl",
+        "GOOGLE_API_MOCK": "true",
+        "AI_ENABLED": "true",
+        "PUBLISHING_ENABLED": "true"
+      }
+    }
+  }
+}

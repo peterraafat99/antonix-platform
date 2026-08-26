@@ -1,0 +1,4 @@
+import{describe,expect,it}from"vitest";import{canAccessAdmin,canAccessCompany,type AccessContext}from"@/lib/auth/permissions";
+const owner:AccessContext={userId:"owner-a",globalRole:"user",memberships:[{companyId:"company-a",role:"business_owner",status:"active"}]};
+const admin:AccessContext={userId:"admin",globalRole:"platform_admin",memberships:[]};
+describe("tenant authorization",()=>{it("keeps owners inside their tenant",()=>{expect(canAccessCompany(owner,"company-a")).toBe(true);expect(canAccessCompany(owner,"company-b")).toBe(false)});it("rejects owner admin access",()=>expect(canAccessAdmin(owner)).toBe(false));it("allows platform admin cross-tenant access",()=>{expect(canAccessAdmin(admin)).toBe(true);expect(canAccessCompany(admin,"company-b")).toBe(true)});it("rejects disabled membership",()=>expect(canAccessCompany({...owner,memberships:[{...owner.memberships[0],status:"disabled"}]},"company-a")).toBe(false))});

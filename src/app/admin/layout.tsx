@@ -1,0 +1,1 @@
+import type{ReactNode}from"react";import{requirePlatformAdmin}from"@/lib/auth/server";export default async function Layout({children}:{children:ReactNode}){await requirePlatformAdmin();return children}
