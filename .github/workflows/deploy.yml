@@ -11,11 +11,40 @@ jobs:
     name: Deploy to Cloudflare
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install --legacy-peer-deps
-      - run: npx @opennextjs/cloudflare build
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build with OpenNext
+        run: npx @opennextjs/cloudflare build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_OAUTH_REDIRECT_URI: https://antonix.nl/api/google/callback
+          GOOGLE_TOKEN_ENCRYPTION_KEY: ${{ secrets.GOOGLE_TOKEN_ENCRYPTION_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_API_MOCK: "true"
+          APP_URL: https://antonix.nl
+
+      - name: Set Cloudflare Worker Secrets
+        run: |
+          echo "${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}" | npx wrangler secret put NEXT_PUBLIC_SUPABASE_URL
+          echo "${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" | npx wrangler secret put NEXT_PUBLIC_SUPABASE_ANON_KEY
+          echo "${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" | npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+          echo "${{ secrets.GOOGLE_CLIENT_ID }}" | npx wrangler secret put GOOGLE_CLIENT_ID
+          echo "${{ secrets.GOOGLE_CLIENT_SECRET }}" | npx wrangler secret put GOOGLE_CLIENT_SECRET
+          echo "${{ secrets.GOOGLE_TOKEN_ENCRYPTION_KEY }}" | npx wrangler secret put GOOGLE_TOKEN_ENCRYPTION_KEY
+          echo "${{ secrets.GEMINI_API_KEY }}" | npx wrangler secret put GEMINI_API_KEY
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
       - name: Deploy Worker to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
