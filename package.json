@@ -9,9 +9,9 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "node --max-old-space-size=4096 ./node_modules/vitest/vitest.mjs run",
-    "build:worker": "opennextjs-cloudflare build",
-    "deploy:staging": "opennextjs-cloudflare build && wrangler deploy --env staging",
-    "deploy:production": "opennextjs-cloudflare build && wrangler deploy --env production"
+    "build:worker": "opennextjs-cloudflare build && node scripts/post-build-cloudflare.mjs",
+    "deploy:staging": "npm run build:worker && wrangler deploy --env staging",
+    "deploy:production": "npm run build:worker && wrangler deploy --env production"
   },
   "dependencies": {
     "@google/genai": "^2.17.1",
