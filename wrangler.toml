@@ -1,0 +1,10 @@
+name = "antonix"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".open-next/assets"
+
+[vars]
+GOOGLE_API_MOCK = "true"
+AI_ENABLED = "true"
+PUBLISHING_ENABLED = "true"
+APP_URL = "https://antonix.nl"
