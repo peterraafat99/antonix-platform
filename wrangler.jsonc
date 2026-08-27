@@ -30,6 +30,10 @@
         {
           "pattern": "antonix.nl/*",
           "zone_name": "antonix.nl"
+        },
+        {
+          "pattern": "www.antonix.nl/*",
+          "zone_name": "antonix.nl"
         }
       ],
       "vars": {
