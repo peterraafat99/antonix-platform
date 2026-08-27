@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "node --max-old-space-size=4096 ./node_modules/vitest/vitest.mjs run",
-    "pages:build": "npx @cloudflare/next-on-pages"
+    "build:worker": "opennextjs-cloudflare build",
+    "deploy:worker": "opennextjs-cloudflare build && wrangler deploy"
   },
   "dependencies": {
     "@google/genai": "^2.17.1",
@@ -21,7 +22,7 @@
     "zod": "^4.1.11"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.8",
+    "@opennextjs/cloudflare": "^1.20.3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
