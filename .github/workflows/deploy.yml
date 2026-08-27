@@ -21,9 +21,10 @@ jobs:
 
       - name: Stub unused WASM files (saves ~1.4 MB from bundle)
         run: |
-          # We don't use OG image generation - zero out these files
-          truncate -s 0 node_modules/next/dist/compiled/@vercel/og/resvg.wasm
-          truncate -s 0 node_modules/next/dist/compiled/@vercel/og/yoga.wasm
+          # Replace with valid minimal WASM modules (magic bytes + version = 8 bytes)
+          # Empty files cause a WASM compile error; minimal valid WASM does not
+          printf '\x00\x61\x73\x6d\x01\x00\x00\x00' > node_modules/next/dist/compiled/@vercel/og/resvg.wasm
+          printf '\x00\x61\x73\x6d\x01\x00\x00\x00' > node_modules/next/dist/compiled/@vercel/og/yoga.wasm
 
       - name: Build with OpenNext
         run: npx @opennextjs/cloudflare build
