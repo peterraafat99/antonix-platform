@@ -24,7 +24,7 @@ export default function Home() {
             <div className="hero-copy">
               <span className="section-kicker">Marketing × technology × automation</span>
               <h1>Build a stronger local presence. <em>Then make it work for you.</em></h1>
-              <p>We create the digital systems behind modern local businesses—from websites and visibility to reputation management and practical AI automation.</p>
+              <p>We create the digital systems behind modern local businesses, from websites and visibility to reputation management and practical AI automation.</p>
               <div className="hero-actions">
                 <Link className="button button-accent" href="/contact">Start a conversation <span aria-hidden="true">→</span></Link>
                 <Link className="text-action" href="/services">Explore our services <span aria-hidden="true">↗</span></Link>

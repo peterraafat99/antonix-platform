@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <PublicPage>
       <main>
-        <PageHero eyebrow="Contact" title="Tell us what is taking too much time—or not working well enough." description="You do not need a finished brief. Share the business, the problem, and what a useful result would look like." />
+        <PageHero eyebrow="Contact" title="Tell us what is taking too much time or not working well enough." description="You do not need a finished brief. Share the business, the problem, and what a useful result would look like." />
         <section className="public-section compact-top">
           <div className="site-container contact-grid">
             <div className="contact-card primary-contact">
