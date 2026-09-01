@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, PublicPage, SectionHeading } from "@/components/public-site";
 
-export const metadata: Metadata = { title: "About", description: "A client-focused marketing and technology agency built for practical delivery." };
+export const metadata: Metadata = { title: "About", description: "A client focused marketing and technology agency built for practical delivery." };
 
 export default function AboutPage() {
   return (

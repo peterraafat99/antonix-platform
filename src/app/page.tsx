@@ -3,7 +3,7 @@ import { PublicPage, SectionHeading } from "@/components/public-site";
 
 const services = [
   { number: "01", title: "Digital presence", text: "Fast, credible websites and landing pages designed to turn local attention into qualified enquiries.", tags: ["Web design", "Landing pages", "Conversion"] },
-  { number: "02", title: "Local visibility", text: "Clear local-search foundations that help the right customers find, understand, and trust your business.", tags: ["Local SEO", "Business profiles", "Content"] },
+  { number: "02", title: "Local visibility", text: "Clear local search foundations that help the right customers find, understand, and trust your business.", tags: ["Local SEO", "Business profiles", "Content"] },
   { number: "03", title: "Reputation systems", text: "A consistent process for monitoring feedback and responding in the business's own voice.", tags: ["Review workflow", "Brand voice", "Escalation"] },
   { number: "04", title: "Smart automation", text: "Thoughtful automation that removes repetitive work while keeping owners informed and in control.", tags: ["AI workflows", "Integrations", "Reporting"] },
 ] as const;
@@ -30,7 +30,7 @@ export default function Home() {
                 <Link className="text-action" href="/services">Explore our services <span aria-hidden="true">↗</span></Link>
               </div>
               <div className="hero-proof" aria-label="How we work">
-                <span>Strategy-led</span><span>Owner-controlled</span><span>Built to scale</span>
+                <span>Strategy driven</span><span>Owner controlled</span><span>Built to scale</span>
               </div>
             </div>
             <div className="hero-system" aria-label="Digital growth system illustration">
@@ -76,7 +76,7 @@ export default function Home() {
               <ul className="check-list">
                 <li><span>01</span><p><strong>Personalized by business</strong>Tone, language, location, and response rules remain separate for every client.</p></li>
                 <li><span>02</span><p><strong>Approval is optional</strong>Owners can review every draft or explicitly enable automation for eligible reviews.</p></li>
-                <li><span>03</span><p><strong>Sensitive cases are protected</strong>Low ratings, risky subjects, and low-confidence drafts can always be escalated.</p></li>
+                <li><span>03</span><p><strong>Sensitive cases are protected</strong>Low ratings, risky subjects, and low confidence drafts can always be escalated.</p></li>
               </ul>
               <Link className="button button-light" href="/google-data">How Google data is handled <span aria-hidden="true">→</span></Link>
             </div>
@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="review-author"><span className="avatar-placeholder">JM</span><p><strong>Jordan M.</strong><small>New customer review</small></p><span className="review-stars">★★★★★</span></div>
                 <p>“The team explained everything clearly and made the whole experience easy.”</p>
               </div>
-              <div className="workflow-line" aria-hidden="true"><span>AI prepares a brand-safe draft</span></div>
+              <div className="workflow-line" aria-hidden="true"><span>AI prepares a brand safe draft</span></div>
               <div className="reply-sample"><span className="mini-icon">✦</span><p>Thank you, Jordan. We’re glad the process felt clear and straightforward from beginning to end.</p></div>
               <div className="workflow-options"><span className="selected-option">Auto-publish eligible</span><span>Request approval</span><span>Escalate</span></div>
             </div>

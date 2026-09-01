@@ -28,7 +28,7 @@ export default function GoogleDataPage() {
             <article><h3>Account and location identifiers</h3><p>Used to show authorized Business Profile accounts and keep each business location mapped to the correct client workspace.</p></article>
             <article><h3>Business Profile information</h3><p>Used to identify the location and personalize the management experience.</p></article>
             <article><h3>Reviews and existing replies</h3><p>Used to display feedback, prepare a response, prevent duplicate work, and show the current reply state.</p></article>
-            <article><h3>Permission to manage replies</h3><p>Used only when an authorized client requests or enables a review-reply action.</p></article>
+            <article><h3>Permission to manage replies</h3><p>Used only when an authorized client requests or enables a review reply action.</p></article>
           </div>
         </div></section>
         <section className="public-section control-section"><div className="site-container">
@@ -43,11 +43,11 @@ export default function GoogleDataPage() {
           <div><span className="section-kicker">Disconnect &amp; delete</span><h2>Leaving must be straightforward.</h2><p>Clients can stop future Google access and can separately request deletion of eligible platform data.</p></div>
           <ol>
             <li><span>01</span><p><strong>Inside the platform</strong>Open the Google Profile settings and choose Disconnect when that feature is available for the account.</p></li>
-            <li><span>02</span><p><strong>Inside your Google Account</strong>Open Google Account security settings, find the connected third-party app, and remove access.</p></li>
+            <li><span>02</span><p><strong>Inside your Google Account</strong>Open Google Account security settings, find the connected third party app, and remove access.</p></li>
             <li><span>03</span><p><strong>Request deletion</strong>Email <a href={`mailto:${brand.privacyEmail}`}>{brand.privacyEmail}</a> from the authorized account. We may verify the request before deleting eligible retained data.</p></li>
           </ol>
         </div></section>
-        <section className="cta-section"><div className="site-container cta-inner"><div><span className="section-kicker">Related information</span><h2>Read the full Privacy Policy for retention, security, and service-provider details.</h2></div><Link className="button button-accent" href="/privacy">Read Privacy Policy <span aria-hidden="true">→</span></Link></div></section>
+        <section className="cta-section"><div className="site-container cta-inner"><div><span className="section-kicker">Related information</span><h2>Read the full Privacy Policy for retention, security, and service provider details.</h2></div><Link className="button button-accent" href="/privacy">Read Privacy Policy <span aria-hidden="true">→</span></Link></div></section>
       </main>
     </PublicPage>
   );

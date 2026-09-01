@@ -12,7 +12,7 @@ export default async function ResetPasswordPage({ searchParams }: { searchParams
           <AntonixIcon size={46} />
           <span style={{ fontWeight: 800, letterSpacing: "0.08em", fontSize: "1.45rem" }}>{brand.name}</span>
         </Link>
-        <blockquote>Autonomous review intelligence. Brand-safe responses. Growth you can measure.</blockquote>
+        <blockquote>Autonomous review intelligence. Brand safe responses. Growth you can measure.</blockquote>
         <small>Enterprise AI Google Review Platform</small>
       </section>
       <section className="auth-panel">
