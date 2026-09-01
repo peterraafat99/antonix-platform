@@ -7,7 +7,7 @@ export const brand = {
   supportEmail: "sales.antonix@outlook.com",
   privacyEmail: "sales.antonix@outlook.com",
   phone: "+31 6 42 38 05 33",
-  serviceArea: "Netherlands & European Union",
+  serviceArea: "Netherlands",
   legalName: "Antonix",
   policyEffectiveDate: "August 2026",
   isPlaceholder: false,

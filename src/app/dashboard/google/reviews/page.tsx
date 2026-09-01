@@ -148,7 +148,7 @@ export default async function ReviewsPage({
             </article>
             <article className="card" style={{ margin: 0 }}>
               <div className="metric-label">Average Rating</div>
-              <div className="metric-value">{reviewData.averageRating ? `${reviewData.averageRating.toFixed(1)} / 5.0` : "—"}</div>
+              <div className="metric-value">{reviewData.averageRating ? `${reviewData.averageRating.toFixed(1)} / 5.0` : "N/A"}</div>
             </article>
             <article className="card" style={{ margin: 0 }}>
               <div className="metric-label">Approval Policy</div>

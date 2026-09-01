@@ -88,7 +88,7 @@ export default async function AdminUsersPage({
                   <option value="">Select User...</option>
                   {profiles.map((p) => (
                     <option key={p.id} value={p.id}>
-                      {p.full_name || "No name"} ({p.id.slice(0, 8)}...) - {p.global_role}
+                      {p.full_name || "No name"} ({p.id.slice(0, 8)}...) | {p.global_role}
                     </option>
                   ))}
                 </select>

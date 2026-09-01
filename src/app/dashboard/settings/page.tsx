@@ -267,14 +267,14 @@ export default async function SettingsPage({
                     defaultChecked={fullSettings.auto_publish_eligible_replies}
                   />
                   <div className="toggle-card-content">
-                    <strong>Auto-Publish Eligible 5-Star Reviews (with 30–60 Min Delay)</strong>
-                    <p>Automatically schedule publication after a randomized 30–60 min server-side delay for 4–5 star reviews with high confidence (≥80%) and zero sensitive flags.</p>
+                    <strong>Auto-Publish Eligible 5-Star Reviews (with 30 to 60 Min Delay)</strong>
+                    <p>Automatically schedule publication after a randomized 30 to 60 min server-side delay for 4 to 5 star reviews with high confidence (≥80%) and zero sensitive flags.</p>
                   </div>
                 </label>
 
                 <div className="notice info" style={{ marginTop: "1rem", marginBottom: 0 }}>
                   <div>
-                    <strong>Enforced Safety Policy:</strong> If manual approval is required, auto-publishing is suspended. 1–3 star ratings, legal complaints, or low confidence drafts are held for human review.
+                    <strong>Enforced Safety Policy:</strong> If manual approval is required, auto-publishing is suspended. 1 to 3 star ratings, legal complaints, or low confidence drafts are held for human review.
                   </div>
                 </div>
 
